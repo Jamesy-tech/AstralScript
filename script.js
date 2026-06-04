@@ -1,0 +1,369 @@
+console.log("0");
+
+// BookUI script.js
+
+console.log("BookUI+ internal JS executed & loaded;")
+
+const input = document.querySelector('.commandInputT5');
+
+const data = {
+  name: "BookUI+",
+  version: "V0.0" 
+};
+
+document.getElementById("getBookUIBtn").style.display = "none";
+
+async function updateVersionFromGithub() {
+  try {
+    const repo = "Jamesy-tech/BookUI";
+
+    const response = await fetch(`https://api.github.com/repos/${repo}/commits?per_page=1`);
+    
+    const linkHeader = response.headers.get('Link');
+    if (linkHeader) {
+
+      console.log(linkHeader);
+
+      const match = linkHeader.match(/page=(\d+)>; rel="last"/);
+      if (match) {
+        const totalCommits = parseInt(match[1]);
+
+        const formattedVersion = (totalCommits * 0.1).toFixed(1);
+        data.version = `V${formattedVersion}`;
+        
+        const nameElem = document.getElementById("nameElementR4");
+        if (nameElem) {
+          nameElem.textContent = `${data.name} ${data.version}`;
+        }
+      }
+    }
+  } catch (err) {
+    console.error("Failed to fetch version, keeping V4.1", err);
+  }
+}
+
+updateVersionFromGithub();
+
+function getConsoleLibraryCode() {
+
+  var code = "javascript:(function(){" +
+  "const library = {" +
+    "\"edit\": \"document.body.contentEditable = document.body.contentEditable !== 'true';\"," +
+  //  "\"change-font\": \"document.body.style.fontFamily = prompt('Font name:', 'Arial');\"," +
+   // "\"change-color\": \"document.body.style.color = prompt('Text color:', 'red');\"," +
+    "\"bg-color\": \"document.body.style.background = prompt('Background color:', 'lightblue');\"," +
+    "\"reset\": \"document.body.removeAttribute('style'); document.body.contentEditable = false;\"" +
+  "};" +
+
+  "const menu = 'Console Library V0.2\\n' + Object.keys(library).join('\\n');" +
+  "const cmd = prompt(menu);" +
+
+  "if (!cmd || !library[cmd]) { alert('Unknown command.'); return; }" +
+
+  "const code = prompt(cmd, library[cmd]);" +
+
+  "if (code) { try { eval(code); } catch (e) { alert('Error:\\n' + e.message); } }" +
+  "})();";
+
+  input.value = code;
+
+}
+
+const cursor_url = "https://raw.githubusercontent.com/Jamesy-tech/BookUI/main/cursor.png";
+
+console.log('1');
+
+document.getElementById("nameElementR4").textContent = `${data.name} ${data.version}`;
+
+const STORAGE_KEY = "bookui_custom_commands";
+
+function getSavedCommands() {
+  return JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
+}
+
+function saveCommands(commands) {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(commands));
+}
+
+function deleteUserCommand(name) {
+  const commands = getSavedCommands();
+  const filtered = commands.filter(cmd => cmd.name !== name);
+  saveCommands(filtered);
+}
+
+function createCommandCard(cmd) {
+  const panel = document.querySelector(".panelC6");
+  const addCard = document.getElementById("addCommandCard");
+
+  const card = document.createElement("div");
+  card.className = "cardB9";
+  card.dataset.command = cmd.code;
+  card.dataset.userCommand = "true";
+  card.dataset.commandName = cmd.name;
+
+  card.innerHTML = `
+    <h3>${cmd.name}</h3>
+    <p>${cmd.description}</p>
+  `;
+
+  card.addEventListener("click", () => {
+    input.value = cmd.code;
+    input.focus();
+    copy(cmd.code);
+  });
+
+  card.addEventListener("contextmenu", e => {
+    e.preventDefault();
+    if (confirm(`Delete command "${cmd.name}"?`)) {
+      deleteUserCommand(cmd.name);
+      card.remove();
+    }
+  });
+
+  panel.insertBefore(card, addCard);
+}
+
+console.log('2');
+
+window.addEventListener("DOMContentLoaded", () => {
+  switchTheme("loadTheme");
+});
+
+console.log('2.5');
+
+setTimeout(() => {
+   const commands = getSavedCommands();
+  commands.forEach(createCommandCard);
+}, 1000);
+
+console.log('2.6');
+
+function addCommand() {
+  const name = prompt("Command name:");
+  if (!name) return;
+
+  const description = prompt("Command description:");
+  if (!description) return;
+
+  const code = prompt("Command code (JavaScript):");
+  if (!code) return;
+
+  const commands = getSavedCommands();
+
+  commands.push({
+    name,
+    description,
+    code
+  });
+
+  saveCommands(commands);
+  createCommandCard({ name, description, code });
+
+  alert("Command added!");
+}
+
+console.log('2.7');
+
+async function copy(text) {
+  try {
+    await navigator.clipboard.writeText(text);
+    console.log('Copied to clipboard:', text);
+  } catch (err) {
+    console.error('Failed to copy:', err);
+  }
+}
+
+console.log('2.8');
+
+setTimeout(() => {
+
+if (window.location.href.includes("jamesy-tech.github.io/BookUI")) {
+
+  document.body.style.cursor = 'url(${cursor_url}), auto';
+
+  console.log("URL contains 'BookUI'!")
+
+ //  document.getElementById("dashboardBtn").style.display = "none";
+
+ document.getElementById("getBookUIBtn").style.display = "";
+
+// var choice = confirm("Redirecting to BookUI+ installation page.");
+
+//if (choice) {
+//    window.location.href = "https://sites.google.com/view/get-bookui";
+//}
+
+} else {
+  console.log("URL does not contain 'BookUI'")
+  window.top.eval(`document.getElementById("jamesyBookUIContainer").style.cursor = 'url(${cursor_url}), auto';`);
+  input.focus();
+}
+
+}, 100);
+
+console.log('2.85');
+
+if (window.location.href.includes("BookUI")) {
+  console.log("URL contains 'BookUI'!")
+   document.body.style.height = "100vh";
+} else {
+   document.body.style.height = "100%";
+}
+
+console.log('2.9');
+
+var customCommands = {
+  "ttrs-hacks": () => alert(`ttrs-hacks
+get-answer.js: ttrs-hacks_get-answer
+auto.js: ttrs-hacks_auto`),
+   
+"ttrs-hacks_get-answer": () => {
+    fetch("https://raw.githubusercontent.com/Jamesy-tech/ttrs-hacks/main/get-answer.js")
+      .then(res => res.text())
+      .then(code => {
+        copy(code);
+        document.querySelector('.commandInputT5').value = code;
+      })
+      .catch(err => console.error(err));
+  },
+
+    "ttrs-hacks_auto": () => {
+    fetch("https://raw.githubusercontent.com/Jamesy-tech/ttrs-hacks/main/auto.js")
+      .then(res => res.text())
+      .then(code => {
+        copy(code);
+        document.querySelector('.commandInputT5').value = code;
+      })
+      .catch(err => console.error(err));
+  },
+
+  "blooket-hacks": () => alert(`blooket-hacks
+cheats-gui.js: blooket-hacks_cheats-gui`),
+
+  "blooket-hacks_cheats-gui": () => {
+    fetch("https://raw.githubusercontent.com/Jamesy-tech/blooket-hacks/main/bookmarklet.js")
+      .then(res => res.text())
+      .then(code => {
+        copy(code);
+        document.querySelector('.commandInputT5').value = code;
+      })
+      .catch(err => console.error(err));
+  },
+
+    "rblx-hacks": () => alert(`rblx-hacks
+rblxgcg.js: rblx-hacks_rblxgcg`),
+
+  "rblx-hacks_rblxgcg": () => {
+    fetch("https://raw.githubusercontent.com/Jamesy-tech/rblx-hacks/main/rblxgcg.js")
+      .then(res => res.text())
+      .then(code => {
+        copy(code);
+        document.querySelector('.commandInputT5').value = code;
+      })
+      .catch(err => console.error(err));
+  },
+
+};
+
+console.log('3');
+
+var originalColor = input.style.borderColor;
+
+document.querySelectorAll('.dropdownR8 > .linkV1').forEach(btn => {
+  btn.addEventListener('click', e => {
+    e.preventDefault();
+    const parent = btn.parentElement;
+    const dropdown = parent.querySelector('.dropdownContentL4');
+    const isOpen = parent.classList.contains('open');
+
+    document.querySelectorAll('.dropdownR8').forEach(d => d.classList.remove('open'));
+
+    if (!isOpen) {
+      parent.classList.add('open');
+      dropdown.style.left = '0';
+      dropdown.style.right = 'auto';
+      dropdown.style.top = '35px';
+      dropdown.style.bottom = 'auto';
+      const rect = dropdown.getBoundingClientRect();
+      if (rect.right > window.innerWidth) {
+        dropdown.style.left = 'auto';
+        dropdown.style.right = '0';
+      }
+      if (rect.bottom > window.innerHeight) {
+        dropdown.style.top = 'auto';
+        dropdown.style.bottom = '100%';
+      }
+    }
+  });
+});
+
+document.addEventListener('click', e => {
+  if (!e.target.closest('.dropdownR8')) {
+    document.querySelectorAll('.dropdownR8').forEach(d => d.classList.remove('open'));
+  }
+});
+
+document.querySelectorAll('.cardB9').forEach(card => {
+  card.addEventListener('click', () => {
+    input.value = card.getAttribute('data-command');
+    input.focus();
+    copy(card.getAttribute('data-command'))
+  });
+});
+
+input.addEventListener('keydown', e => {
+  if (e.key === 'Enter') {
+    input.style.borderColor = "red";
+    setTimeout(() => {
+      input.style.borderColor = originalColor;
+    }, 100);
+
+    const cmd = input.value.trim();
+
+    if (customCommands.hasOwnProperty(cmd)) {
+      try {
+        customCommands[cmd]();
+        input.style.borderColor = 'lime';
+      } catch {}
+    } else {
+      try {
+        window.top.eval(input.value);
+        input.style.borderColor = 'lime';
+      } catch {}
+    }
+  }
+});
+
+console.log('4');
+
+function switchTheme(theme) {
+  if (theme === "loadTheme") {
+    const saved = localStorage.getItem("theme");
+    if (saved) switchTheme(saved);
+    return;
+  }
+
+  if (theme === "c00lgui") {
+    document.getElementById("nameElementR4").textContent = "c00lgui";
+   
+      (function(){let s="#jamesyBookUIContainer *";if(!s)return;document.querySelectorAll(s).forEach(e=>e.style.outline='2px solid red');})();
+      
+  } else {
+    document.getElementById("nameElementR4").textContent = `${data.name} ${data.version}`;
+      document.querySelectorAll("*").forEach(e=>e.style.outline='none');
+  }
+
+  document.body.classList.forEach(cls => {
+    if (cls.startsWith("theme-")) document.body.classList.remove(cls);
+  });
+  if (theme) {
+    document.body.classList.add(`theme-${theme}`);
+    localStorage.setItem("theme", theme);
+  } else {
+    localStorage.removeItem("theme");
+  }
+}
+
+window.addEventListener("DOMContentLoaded", () => switchTheme("loadTheme"));
+
+console.log('5');

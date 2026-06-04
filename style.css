@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Stack+Sans+Text:wght@200..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend:wght@100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Stack+Sans+Text:wght@200..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Mona+Sans:ital,wght@0,200..900;1,200..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Mona+Sans:ital,wght@0,200..900;1,200..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Strichpunkt+Sans:wght@400..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Mona+Sans:ital,wght@0,200..900;1,200..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pixelify+Sans:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Strichpunkt+Sans:wght@400..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fira+Code:wght@300..700&family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Mona+Sans:ital,wght@0,200..900;1,200..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pixelify+Sans:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Strichpunkt+Sans:wght@400..900&display=swap');
+
+/* start of themes (SYNC WITH THEMES.CSS) */
+
+:root {
+    --primary-color: #007bff;
+    --background-color: #0a0a0a;
+    --panel-color: #141414;
+    --text-color: #ffffff;
+    --muted-text: #ccc;
+
+    /* dashboard themes */
+
+    --bg-color: #0a0a0a;
+    --border-color: #1f1f1f;
+
+}
+
+body.theme-purple {
+    --primary-color: #b388ff;
+    --background-color: #0a0a0a;
+    --panel-color: #141414;
+    --text-color: #ffffff;
+    --muted-text: #ccc;
+}
+
+body.theme-white {
+    --primary-color: #ffffff;
+    --background-color: #0a0a0a;
+    --panel-color: #141414;
+    --text-color: #ffffff;
+    --muted-text: #ccc;
+}
+
+body.theme-nebula {
+    --primary-color: #b388ff;
+    --background-color: #0a0510;
+    --panel-color: #1a1225;
+    --text-color: #00ffaa;
+    --muted-text: #00ffaa;
+    --accent-color: #00cc88;
+}
+
+body.theme-cyan {
+    --primary-color: #00e5ff;
+    --background-color: #0a0a0a;
+    --panel-color: #141414;
+    --text-color: #ffffff;
+    --muted-text: #ccc;
+}
+
+body.theme-pink {
+    --primary-color: #ff80ab;
+    --background-color: #0a0a0a;
+    --panel-color: #141414;
+    --text-color: #ffffff;
+    --muted-text: #ccc;
+}
+
+body.theme-orange {
+    --primary-color: #ff9100;
+    --background-color: #0a0a0a;
+    --panel-color: #141414;
+    --text-color: #ffffff;
+    --muted-text: #ccc;
+}
+
+body.theme-lime {
+    --primary-color: #c6ff00;
+    --background-color: #0a0a0a;
+    --panel-color: #141414;
+    --text-color: #ffffff;
+    --muted-text: #ccc;
+}
+
+body.theme-red {
+    --primary-color: #ff4747;
+     --background-color: #000000;
+    --panel-color: #0d0d0d;
+    --text-color: #ffffff;
+    --muted-text: #cccccc;
+}
+
+body.theme-green {
+    --primary-color: #00c853;
+        --background-color: #000000;
+    --panel-color: #0d0d0d;
+    --text-color: #ffffff;
+    --muted-text: #cccccc;
+}
+
+body.theme-rainbow {
+    --primary-color: #ff0000;
+    --background-color: #000000;
+    --panel-color: #0d0d0d;
+    --text-color: #ffffff;
+    --muted-text: #cccccc;
+
+    animation: rainbowFade 5s linear infinite;
+}
+
+@keyframes rainbowFade {
+    0%   { --primary-color: #ff0000; } /* red */
+    20%  { --primary-color: #ffff00; } /* yellow */
+    40%  { --primary-color: #00ff00; } /* green */
+    60%  { --primary-color: #00ffff; } /* cyan */
+    80%  { --primary-color: #0000ff; } /* blue */
+    100% { --primary-color: #ff0000; } /* back to red */
+}
+
+body.theme-morning-glow {
+    --primary-color: #F9A825;
+    --background-color: #000000;
+    --panel-color: #0d0d0d;
+    --text-color: #ffffff;
+    --muted-text: #cccccc;
+}
+
+/* end of themes */
+
+.bodyA9 {
+    display: flex;
+    flex-direction: column;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    cursor: url("https://raw.githubusercontent.com/Jamesy-tech/BookUI/main/cursor.png"), auto !important;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Strichpunkt Sans', !important;
+    text-decoration: none;
+}
+
+.navbarX9 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #101010;
+    padding: 10px 28px;
+    border-bottom: 2px solid var(--primary-color);
+    flex-shrink: 0;
+}
+
+.brandQ3 {
+    font-family: 'Strichpunkt Sans' !important;
+    font-size: 1.4rem !important;
+    font-weight: 600;
+    color: var(--primary-color);
+    letter-spacing: 1px;
+}
+
+.listM2 {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+}
+
+.itemK7 {
+    position: relative;
+}
+
+.linkV1 {
+    text-decoration: none !important;
+    color: var(--muted-text);
+    font-weight: 500;
+    transition: 0.2s ease;
+    font-family: 'Strichpunkt Sans' !important;
+}
+
+.linkV1:hover {
+    color: var(--primary-color);
+}
+
+.linkV1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.linkV1:hover::after {
+    width: 100%;
+}
+
+.dropdownContentL4 {
+    display: none;
+    position: absolute;
+    background-color: var(--panel-color);
+    min-width: 160px;
+    top: 35px;
+    margin-top:5px;
+    padding-bottom:2px;
+    left: 0;
+    border: 1px solid var(--primary-color);
+    border-radius: 0px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    z-index: 1;
+}
+
+.dropdownContentL4 a {
+    display: block;
+    padding: 10px 16px;
+    font-family: 'Strichpunkt Sans' !important;
+    text-decoration: none !important;
+    color: var(--muted-text);
+}
+
+.dropdownContentL4 a:hover {
+    background-color: #0d0d0d;
+    color: var(--primary-color);
+}
+
+.dropdownR8.open .dropdownContentL4 {
+    display: block;
+}
+
+.dropdownR8 {
+    position: relative;
+}
+
+.dropdownContentL4[data-reverse="true"] {
+    left: auto !important;
+    right: 0 !important;
+}
+
+.bodyY2 {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+body.theme-c00lgui {
+    --primary-color: #ff4747;
+     --background-color: #000000;
+    --panel-color: #0d0d0d;
+    --text-color: #ffffff;
+    --muted-text: #cccccc;
+}
+
+.panelC6 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+    gap: 20px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.cardB9 {
+    background-color: var(--panel-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 0px;
+    padding: 20px;
+    transition: transform 0.2s, background-color 0.2s;
+    height: auto;
+    font-family: 'Strichpunkt Sans' !important;
+}
+
+.cardB9:hover {
+    background-color: #1a1a1a;
+}
+
+.cardB9 h3 {
+    margin: 0 0 10px;
+    color: var(--primary-color);
+}
+
+.cardPlus {
+    font-size:67px;
+    color:var(--primary-color);
+    display:block;
+    padding:0px;
+    padding-bottom:15px;
+    margin:0px;
+    }
+
+.cardB9 p {
+    margin: 0;
+    color: var(--muted-text);
+    font-size: 0.95rem !important;
+}
+
+.inputContainerF1 {
+    display: flex;
+    border-top: 2px solid var(--primary-color);
+    padding: 12px 20px;
+    background-color: #101010;
+    flex-shrink: 0;
+}
+
+.commandInputT5 {
+    flex: 1;
+    padding: 10px 14px;
+    border-radius: 0px;
+    border: 1px solid var(--primary-color);
+    background-color: var(--panel-color);
+    color: var(--text-color);
+    font-family: "Fira Code";
+    font-size: 0.9rem !important;
+    outline: none;
+}
+
+.commandInputT5::placeholder {
+    color: var(--text-color);
+};
