@@ -1,13 +1,13 @@
 console.log("0");
 
-// BookUI script.js
+// script.js
 
 console.log("BookUI+ internal JS executed & loaded;")
 
 const input = document.querySelector('.commandInputT5');
 
 const data = {
-  name: "BookUI+",
+  name: "AstralScript",
   version: "V0.0" 
 };
 
