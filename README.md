@@ -1,5 +1,7 @@
 # BookUI+ Command Panel
 
+Please note that AstralScript is a scrapped version of BookUI.
+
 https://jamesy-tech.github.io/BookUI
 
 BookUI+ is a bookmarklet that opens a command panel inside your browser.  
